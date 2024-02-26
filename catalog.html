@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона - Каталог</title>
   </head>
   <body>
-    <header class="page-header">
+    <header data-test="header" class="page-header">
       <a class="main-logo"></a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -37,8 +37,8 @@
       </nav>
     </header>
 
-    <main class="main-inner">
-      <section class="catalog-filter">
+    <main data-test="main" class="main-inner">
+      <section data-test="filter" class="catalog-filter">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седона</h1>
           <ul class="breadcrumbs">
@@ -113,7 +113,8 @@
           </form>
         </div>
       </section>
-      <section class="catalog-hotels">
+
+      <section data-test="catalog" class="catalog-hotels">
         <h2 class="visually-hidden">Результаты поиска гостиницы</h2>
         <div class="sort">
           <p class="sort-result">Найдено гостиниц: 38</p>
@@ -249,7 +250,7 @@
         </ul>
       </section>
 
-      <section class="subscribe">
+      <section data-test="subscribe" class="subscribe">
         <div class="subscribe-container">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <b class="subscribe-title">Подпишитесь на рассылку</b>
@@ -262,7 +263,7 @@
       </section>
   </main>
 
-  <footer class="page-footer">
+  <footer data-test="footer" class="page-footer">
     <section class="social">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
@@ -283,10 +284,12 @@
         </li>
       </ul>
     </section>
+
     <section class="phone">
       <h2 class="visually-hidden">Номер телефона</h2>
       <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </section>
+
     <section class="developer">
       <h2 class="visually-hidden">Разработчик сайта</h2>
       <a class="developer-link" href="https://htmlacademy.ru/">
