@@ -6,7 +6,9 @@
   </head>
   <body>
     <header data-test="header" class="page-header">
-      <a class="main-logo"></a>
+      <a class="main-logo-link">
+        <img class="main-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="">
+      </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -28,12 +30,13 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
+              <span class="number-of likes">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда</a>
-          </li>
         </ul>
+        <a class="navigation-link" href="#">
+          <span class="visually-hidden navigation-button">Хочу сюда!</span>
+        </a>
       </nav>
     </header>
 
@@ -41,7 +44,7 @@
       <section data-test="filter" class="catalog-filter">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седона</h1>
-          <ul class="breadcrumbs">
+          <ol class="breadcrumbs">
             <li class="breadcrumbs-list">
               <a class="breadcrumbs-link" href="index.html">
                 <span class="visually-hidden">Главная</span>
@@ -50,7 +53,7 @@
             <li class="breadcrumbs-list">
               <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
-          </ul>
+          </ol>
         </header>
         <div class="catalog-form">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
@@ -126,11 +129,11 @@
           <ul class="sort-button-control">
             <li class="sort-button-item">
               <a href="#" class="sort-button-link"></a>
-              <span class="visually-hidden">Показать карточки</span>
+              <span class="visually-hidden">Показать плитку</span>
             </li>
             <li class="sort-button-item">
               <a href="#" class="sort-button-link"></a>
-              <span class="visually-hidden">Показать слайдер</span>
+              <span class="visually-hidden">Показать слайдшоу</span>
             </li>
             <li class="sort-button-item">
               <a href="#" class="sort-button-link"></a>
@@ -141,7 +144,7 @@
         <ul class="catalog-list">
           <li class="catalog-card">
             <a class="catalog-card-link" href="#">
-              <img src="#" alt="Изображение отеля">
+              <img class="catalog-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Изображение отеля">
               <h3 class="catalog-card-title">Amara Resort & Spa</h3>
             </a>
             <div class="catalog-card-price">
@@ -164,7 +167,7 @@
           </li>
           <li class="catalog-card">
             <a class="catalog-card-link" href="#">
-              <img src="#" alt="Изображение отеля">
+              <img class="catalog-card-image" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Изображение отеля">
               <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
             </a>
             <div class="catalog-card-price">
@@ -187,7 +190,7 @@
           </li>
           <li class="catalog-card">
             <a class="catalog-card-link" href="#">
-              <img src="#" alt="Изображение отеля">
+              <img class="catalog-card-image" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Изображение отеля">
               <h3 class="catalog-card-title">Desert Quail Inn</h3>
             </a>
             <div class="catalog-card-price">
@@ -209,7 +212,7 @@
           </li>
           <li class="catalog-card">
             <a class="catalog-card-link" href="#">
-              <img src="#" alt="Изображение отеля">
+              <img class="catalog-card-image" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Изображение отеля">
               <h3 class="catalog-card-title">GreenTree Inn</h3>
             </a>
             <div class="catalog-card-price">
@@ -268,17 +271,17 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
         <li class="social-item">
-          <a class="social-link">
+          <a class="social-link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link">
+          <a class="social-link" href="https://t.me/htmlacademy ">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link">
+          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
@@ -293,7 +296,7 @@
     <section class="developer">
       <h2 class="visually-hidden">Разработчик сайта</h2>
       <a class="developer-link" href="https://htmlacademy.ru/">
-        <img class="developer-image" src="#" alt="Логотип html-academy">
+        <img class="developer-image" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Логотип html-academy">
       </a>
     </section>
   </footer>

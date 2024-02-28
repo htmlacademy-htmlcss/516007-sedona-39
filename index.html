@@ -6,7 +6,9 @@
   </head>
   <body>
     <header data-test="header" class="page-header">
-      <a class="main-logo"></a>
+      <a class="main-logo-link">
+        <img class="main-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="">
+      </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -28,19 +30,21 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
+              <span class="number-of likes">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда</a>
-          </li>
         </ul>
+        <a class="navigation-link" href="#">
+          <span class="visually-hidden navigation-button">Хочу сюда!</span>
+        </a>
       </nav>
     </header>
 
     <main data-test="main" class="main-index">
       <section data-test="hero" class="banner">
         <h1 class="visually-hidden">Город Седона</h1>
-        <img class="banner-image" src="#" alt="Welcome to the goergeous Sedona">
+        <img class="banner-image-title" src="images/welcome-index.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+        <img class="banner-image" src="images/index-background.jpg" width="1200" height="485" alt="Welcome to the goergeous Sedona">
       </section>
 
       <section data-test="advantages" class="advantages">
@@ -49,14 +53,12 @@
           <b>Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
           <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
-        <div class="advantages-content">
-          <div class="advantages-item">
-            <h3 class="advantages-title">Настоящий городок</h3>
-            <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          </div>
-          <img class="advantages-image" src="#" alt="Гостиница Седоны">
-        </div>
         <ul class="advantages-list">
+            <li class="advantages-list-item">
+              <h3 class="advantages-title">Настоящий городок</h3>
+              <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <img class="advantages-image" src="images/advantages-background-1.jpg" width="800" height="385" alt="Дома на фоне гор">
+            </li>
           <li class="advantages-list-item">
             <h3 class="advantages-list-title">Небольшая площадь</h3>
             <p class="advantages-list-description">Все достопримечательности находятся очень близко</p>
@@ -69,14 +71,12 @@
             <h3 class="advantages-list-title">Мало туристов</h3>
             <p class="advantages-list-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-        </ul>
-        <div class="advantages-content">
-          <img class="advantages-image" src="#" alt="Каньон Седоны">
-          <div class="advantages-item">
+          <li class="advantages-list-item">
+            <img class="advantages-image" src="images/advantages-background-2.jpg" width="800" height="385" alt="Каньон Седоны">
             <h3 class="advantages-title">Там есть мост дьявола</h3>
             <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
 
       <section class="services">
@@ -112,6 +112,7 @@
 
       <section data-test="subscribe" class="subscribe">
         <div class="subscribe-container">
+          <img class="subscribe-image" src="images/subscribe-background.jpg" width="1200" height="415" alt="горы Седоны">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <b class="subscribe-title">Подпишитесь на рассылку</b>
           <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -128,17 +129,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link">
+            <a class="social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link">
+            <a class="social-link" href="https://t.me/htmlacademy ">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link">
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
@@ -153,7 +154,7 @@
       <section class="developer">
         <h2 class="visually-hidden">Разработчик сайта</h2>
         <a class="developer-link" href="https://htmlacademy.ru/">
-          <img class="developer-image" src="#" alt="Логотип html-academy">
+          <img class="developer-image" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Логотип html-academy">
         </a>
       </section>
     </footer>
