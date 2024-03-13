@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header data-test="header" class="page-header">
-      <a class="main-logo-link" href="index.html">
-        <img class="main-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
-      </a>
+    <div class="container">
+      <header data-test="header" class="page-header">
       <nav class="navigation">
+        <a class="main-logo-link" href="index.html">
+          <img class="main-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
+        </a>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -22,7 +23,7 @@
             <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -31,20 +32,22 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
-              <span class="number-of likes">12</span>
+              <span class="number-of-likes">12</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="navigation-button button button-brown">Хочу сюда!</span>
             </a>
           </li>
         </ul>
-        <a class="navigation-link" href="#">
-          <span class="navigation-button button button-brown">Хочу сюда!</span>
-        </a>
       </nav>
-    </header>
+      </header>
 
-    <main data-test="main" class="main-inner">
+      <main data-test="main" class="main-inner main-container">
       <section data-test="filter" class="catalog-filter">
         <header class="inner-header">
-          <h1 class="inner-header-title">Гостиницы Седона</h1>
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
             <li class="breadcrumbs-list">
               <a class="breadcrumbs-link" href="index.html">
@@ -69,18 +72,18 @@
                 </li>
                 <li class="catalog-filter-checkbox-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="Wi-Fi" checked>Wi-Fi
+                    <input class="control-input" type="checkbox" name="Wi-Fi" checked>Парковка
                   </label>
                 </li>
                 <li class="catalog-filter-checkbox-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="parking">Парковка
+                    <input class="control-input" type="checkbox" name="parking">Wi-Fi
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья:</legend>
+              <legend class="catalog-filter-title">Тип Жилья:</legend>
               <ul class="catalog-filter-radio">
                 <li class="catalog-filter-radio-item">
                   <label class="control">
@@ -101,19 +104,29 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <label class="catalog-filter-range" for="min-price">от
+              <div class="catalog-filter-wrapper">
+                <label class="catalog-filter-range" for="min-price">от</label>
                 <input class="catalog-filter-range-number" type="number" name="min-interval" value="0" id="min-price">
-              </label>
-              <label class="catalog-filter-range" for="max-price">до
+                <label class="catalog-filter-range" for="max-price">до</label>
                 <input class="catalog-filter-range-number" type="number" name="max-interval" value="9000" id="max-price">
-              </label>
-              <div class="catalog-filter-range-input">
-                <input type="range" class="range-min" min="0" max="9000" value="0" step="1">
-                <input type="range" class="range-max" min="0" max="9000" value="9000" step="1">
+              </div>
+              <div class="atalog-filter-range-toggle">
+                <div class="range-scale">
+                  <div class="range-bar">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </fieldset>
-            <button class="catalog-filter-button button button-blue" type="submit">Применить</button>
-            <button class="catalog-filter-button-reset button" type="submit">Сбросить</button>
+            <div class="catalog-buttons">
+              <button class="catalog-filter-button button button-blue" type="submit">Применить</button>
+              <button class="catalog-filter-button-reset button" type="submit">Сбросить</button>
+            </div>
           </form>
         </div>
       </section>
@@ -154,7 +167,7 @@
             </div>
             <div class="catalog-card-buttons">
               <a class="catalog-card-detail button button-brown" href="#">Подробнее</a>
-              <a class="catalog-card-favorites button button-blue" href="#">Избранное</a>
+              <a class="catalog-card-favorites button button-blue" href="#">В избранное</a>
             </div>
             <div class="catalog-card-rating">
               <ul class="catalog-card-stars">
@@ -177,7 +190,7 @@
             </div>
             <div class="catalog-card-buttons">
               <a class="catalog-card-detail button button-brown" href="#">Подробнее</a>
-              <a class="catalog-card-favorites button button-green" href="#">В избранном</a>
+              <a class="catalog-card-favorites-active button button-green" href="#">В избранном</a>
             </div>
             <div class="catalog-card-rating">
               <ul class="catalog-card-stars">
@@ -200,7 +213,7 @@
             </div>
             <div class="catalog-card-buttons">
               <a class="catalog-card-detail button button-brown" href="#">Подробнее</a>
-              <a class="catalog-card-favorites button button-blue" href="#">Избранное</a>
+              <a class="catalog-card-favorites button button-blue" href="#">В избранное</a>
             </div>
             <div class="catalog-card-rating">
               <ul class="catalog-card-stars">
@@ -222,7 +235,7 @@
             </div>
             <div class="catalog-card-buttons">
               <a class="catalog-card-detail button button-brown" href="#">Подробнее</a>
-              <a class="catalog-card-favorites button button-blue" href="#">Избранное</a>
+              <a class="catalog-card-favorites button button-blue" href="#">В избранное</a>
             </div>
             <div class="catalog-card-rating">
               <ul class="catalog-card-stars">
@@ -247,7 +260,7 @@
             <a class="pagination-link button button-blue">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-three-dots">...</a>
+            <a class="pagination-link pagination-three-dots">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link button button-blue">10</a>
@@ -255,19 +268,17 @@
       </section>
 
       <section data-test="subscribe" class="subscribe">
-        <div class="subscribe-container">
-          <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <b class="subscribe-title">Подпишитесь на рассылку</b>
-          <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-email" placeholder="Ваш e-mail" name="subscribe-email" type="email">
-            <button class="subscribe-button button button-blue" type="submit">Подписаться</button>
-          </form>
-        </div>
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <b class="subscribe-title">Подпишитесь на рассылку</b>
+        <p class="subscribe-description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="subscribe-email" placeholder="Ваш e-mail" name="subscribe-email" type="email">
+          <button class="subscribe-button button button-blue" type="submit">Подписаться</button>
+        </form>
       </section>
-  </main>
+      </main>
 
-  <footer data-test="footer" class="page-footer">
+      <footer data-test="footer" class="page-footer">
     <section class="social">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
@@ -300,4 +311,7 @@
         <img class="developer-image" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Логотип html-academy">
       </a>
     </section>
-  </footer>
+      </footer>
+    </div>
+  </body>
+</html>
