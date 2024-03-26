@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
   </head>
   <body>
     <div class="container">
@@ -177,6 +178,70 @@
         </a>
       </section>
       </footer>
+    </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg class="button-cross" aria-hidden="true" focusable="false" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.3928 1.29231L13.1005 0L7.39282 5.70769L1.68513 0L0.392822 1.29231L6.10051 7L0.392822 12.7077L1.68513 14L7.39282 8.29231L13.1005 14L14.3928 12.7077L8.68513 7L14.3928 1.29231Z"/>
+          </svg>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-wrapper">
+              <label class="title-field" for="arrival-date">Дата Заезда:</label>
+              <input class="text-field" type="text" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" name="arrival-date" required>
+              <span class="error-message">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="field-wrapper">
+              <label class="title-field" for="date-of-departure">Дата Выезда:</label>
+              <input class="text-field" type="text" id="date-of-departure" value="1 сентября 2023" placeholder="Укажите дату" name="date-of-departure" required>
+              <span class="info-message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="group-count-wrapper">
+              <div class="field-count-wrapper">
+                <label class="title-field title-field-adults" for="adults">Взрослые:</label>
+                <button class="button-count button-min" type="button">
+                  <svg class="button-change" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z"/>
+                  </svg>
+                </button>
+                <input class="text-field number-field" type="number" id="adults" value="2" name="adult" required>
+                <button class="button-count button-max" type="button">
+                  <svg class="button-change" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="field-count-wrapper">
+                <span class="tooltip-wrapper">
+                  <label class="title-field title-field-kids" for="kids">Дети:</label>
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <svg class="tooltip-icon" width="3" height="12" viewBox="0 0 3 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.393066 0H2.39307V2H0.393066V0ZM2.39307 12H0.393066V3H2.39307V12Z"/>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <button class="button-count button-min" type="button">
+                  <svg class="button-change" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z"/>
+                  </svg>
+                </button>
+                <input class="text-field number-field" type="number" id="kids" value="2" name="kids" required>
+                <button class="button-count button-max" type="button">
+                  <svg class="button-change" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button class="button-submit button button-blue" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>

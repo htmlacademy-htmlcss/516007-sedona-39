@@ -67,7 +67,7 @@ body {
 }
 
 .button-brown:hover,
-.button-brown:focus {
+.button-brown:focus-visible {
   background-color: #615048;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 .button-blue:hover,
-.button-blue:focus {
+.button-blue:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .button-green:hover,
-.button-green:focus {
+.button-green:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -581,12 +581,12 @@ body {
   fill: #68a2ca;
 }
 
-.social-link:focus
+.social-link:focus-visible
 .social-icon {
   fill: #68a2ca;
 }
 
-.social-link:focus {
+.social-link:focus-visible {
   outline: none;
 }
 
@@ -639,7 +639,7 @@ body {
   fill: #756157;
 }
 
-.developer-link:focus
+.developer-link:focus-visible
 .developer-logo {
   fill: #756157;
 }
@@ -649,7 +649,7 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-.developer-link:focus {
+.developer-link:focus-visible {
   outline: none;
 }
 
@@ -890,7 +890,9 @@ body {
 }
 
 .catalog-filter-range-number::-webkit-outer-spin-button,
-.catalog-filter-range-number::-webkit-inner-spin-button {
+.catalog-filter-range-number::-webkit-inner-spin-button,
+.number-field::-webkit-outer-spin-button,
+.number-field::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -963,7 +965,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.catalog-filter-button-reset:focus {
+.catalog-filter-button-reset:focus-visible {
   outline: 3px solid #83b3d3;
 }
 
@@ -1059,7 +1061,7 @@ body {
   border-color: #000000;
 }
 
-.sort-button-link:focus {
+.sort-button-link:focus-visible {
   border-color: #68a2ca;
   outline: none;
 }
@@ -1218,6 +1220,296 @@ body {
   background-color: #e6e6e6;
 }
 
-.subscribe-email:focus {
+.subscribe-email:focus-visible {
   outline: 3px solid #83b3d3;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-auth {
+  width: 717px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 51px;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: none;
+  border: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  outline: none;
+  border: none;
+}
+
+.modal-close-button:active .button-cross {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.button-cross {
+  fill: #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 64px;
+  max-width: 540px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-wrapper {
+  display: grid;
+  grid-template-columns: 137px 440px;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.error-message,
+.info-message {
+  grid-column: 2 / 3;
+  padding-top: 4px;
+  padding-left: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #ff5757;
+}
+
+.info-message {
+  color: #333333;
+}
+
+.group-count-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 47px;
+}
+
+.field-count-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.title-field-adults {
+  margin-right: 46px;
+}
+
+.title-field-kids {
+  margin-right: 83px;
+}
+
+.title-field {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.text-field {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.field-wrapper
+.text-field {
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center right 20px;
+}
+
+.text-field:hover {
+  background-color: #e6e6e6;
+}
+
+.text-field:focus-visible {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+}
+
+.number-field {
+  width: 20px;
+  padding: 14px 5px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.number-field:focus-visible {
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.button-count {
+  width: 40px;
+  height: 48px;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.button-count:focus-visible {
+  outline: none;
+}
+
+.button-count:hover .button-change {
+  fill: #000000;
+}
+
+.button-count:focus-visible .button-change {
+  fill: #000000;
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  }
+
+.button-count:active .button-change {
+  fill: rgba(117, 97, 87, 0.3);
+  outline: none;
+  border-radius: none;
+  }
+
+.button-change {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip-toggle {
+  position: absolute;
+  border: none;
+  background-color: #83b3d3;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 26px;
+  height: 26px;
+  top: 0;
+  left: 59px;
+  cursor: pointer;
+}
+
+.tooltip-toggle:focus-visible {
+  outline: none;
+}
+
+.tooltip-icon {
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  fill: #ffffff;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip-text {
+  position: absolute;
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 21px 18px 22px 22px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  width: 256px;
+  box-sizing: border-box;
+  top: 40px;
+  left: -56px;
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 117px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 9px 10px;
+  border-color: transparent transparent #333333 transparent;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.button-submit {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 18px;
+  border-radius: 10px;
 }
